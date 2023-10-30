@@ -24,18 +24,88 @@
 // Beikut contoh penggunaan operator array;
 
 $a = [
-    "Muhammad",
-    "Shinta"
+  "firstName" =>  "Muhammad",
+ 
 ];
 
 $b = [
-    "Ramadhan",
-    "Norr Azzahra"
+   
+   "lastName" => "Ramadhan"
+    
 ];
 
 // union (+)
 
 $union = $a + $b;
 var_dump($union);
+
+// equality(==)
+
+$c = [
+  
+   "nama" => "Muhammad",
+   "belakang" => "Ramadhan"
+];
+
+$d = [
+   "belakang" => "Ramadhan",
+   "nama" => "Muhammad"
+   
+];
+  
+$equality = $c == $d;
+var_dump($equality);
+
+// kesimpulannya true jika key-value sama walaupun posisi tidak sama(equality)
+
+// identity(===)
+
+$e = [
+   "namaDepan" => "Muhammad",
+   "namaBelakang" => "Ramadhan"
+];
+
+$f = [
+   "namaDepan" => "Muhammad",
+   "namaBelakang" => "Ramadhan"
+];
+
+$identity = $e === $f;
+var_dump($identity);
+// kesimpulan true jika key value sama dan posisi kedua key value dari masing-masing array sama(identity)
+
+// inequality (!=)
+
+$a = [
+   "firstName" =>  "Muhammad",
+  
+ ];
+ 
+ $b = [
+    
+    "firstname" => "Muhammad"
+     
+ ];
+ $inequality = $a != $b;
+ var_dump($inequality);
+//  kesimpulannya true jika $a dan $ tidak sama key ataupun valuenya (inequality)
+
+// nonidentity
+
+$a = [
+   "firstName" =>  "Muhammad",
+   "lastname" => "Ramadhan"
+  
+ ];
+ 
+ $b = [
+    "lastname" => "Ramadhan",
+    "firstName" => "Muhammad"
+     
+ ];
+
+ $nonidentity = $a !== $b;
+ var_dump($nonidentity);
+//  kesimpulan true jika $a dan $b tidak sama key valuenya dan posisi key valuenya.
 
 ?>
